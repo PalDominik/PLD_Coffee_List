@@ -1,5 +1,5 @@
 import { useState,  useCallback } from "react";
-import type { Coffee } from "../Types/Type";
+import type { Coffee } from "../../Types/Type";
 
 const url = "http://localhost:3000/Coffees";
 
