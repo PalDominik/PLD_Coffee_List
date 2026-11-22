@@ -12,5 +12,3 @@ export interface Coffee{
   inStock: boolean
   tags: string[]
 }
-
-export type Role = "user" | "moderator" | "admin"

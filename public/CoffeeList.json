@@ -1,17 +1,228 @@
 {
-    "Coffees" : [
-  { "id": "k3m9x", "name": "Tchibo", "date": "2025-10-15", "import": true, "category": "brand", "origin": "Germany", "roast": "medium", "price": 8.49, "weightGrams": 500, "rating": 4.2, "inStock": true, "tags": ["everyday", "ground"] },
-  { "id": "p8q2w", "name": "Lavazza", "date": "2025-09-03", "import": true, "category": "brand", "origin": "Italy", "roast": "medium-dark", "price": 11.9, "weightGrams": 1000, "rating": 4.5, "inStock": true, "tags": ["espresso", "beans"] },
-  { "id": "z7b4n", "name": "Illy", "date": "2025-08-21", "import": true, "category": "brand", "origin": "Italy", "roast": "medium", "price": 7.8, "weightGrams": 250, "rating": 4.6, "inStock": true, "tags": ["premium", "arabica"] },
-  { "id": "d5h1c", "name": "Nespresso", "date": "2025-11-02", "import": false, "category": "capsule", "origin": "Mixed", "roast": "dark", "price": 5.6, "weightGrams": 52, "rating": 4.3, "inStock": true, "tags": ["capsules", "espresso"] },
-  { "id": "t9r6v", "name": "Jacobs", "date": "2025-07-14", "import": true, "category": "brand", "origin": "Germany", "roast": "medium", "price": 9.2, "weightGrams": 500, "rating": 4.0, "inStock": false, "tags": ["filter", "ground"] },
-  { "id": "m2l8e", "name": "Ethiopian Yirgacheffe", "date": "2025-06-30", "import": true, "category": "single-origin", "origin": "Ethiopia", "roast": "light", "price": 16.5, "weightGrams": 250, "rating": 4.8, "inStock": true, "tags": ["floral", "fruity", "specialty"] },
-  { "id": "w4y7j", "name": "Colombian Supremo", "date": "2025-05-18", "import": true, "category": "single-origin", "origin": "Colombia", "roast": "medium", "price": 13.0, "weightGrams": 250, "rating": 4.4, "inStock": true, "tags": ["balanced", "caramel"] },
-  { "id": "g1s3u", "name": "Local Roastery Blend", "date": "2025-10-27", "import": false, "category": "blend", "origin": "Hungary", "roast": "medium-dark", "price": 12.4, "weightGrams": 250, "rating": 4.7, "inStock": true, "tags": ["local", "small-batch"] },
-  { "id": "x6f0a", "name": "Espresso Ristretto", "date": "2025-04-09", "import": false, "category": "blend", "origin": "Hungary", "roast": "dark", "price": 10.9, "weightGrams": 250, "rating": 4.1, "inStock": false, "tags": ["intense", "espresso"] },
-  { "id": "n8c5o", "name": "Costa Rica Tarrazú", "date": "2025-03-22", "import": true, "category": "single-origin", "origin": "Costa Rica", "roast": "medium-light", "price": 15.2, "weightGrams": 250, "rating": 4.6, "inStock": true, "tags": ["bright", "citrus"] },
-  { "id": "b3v9i", "name": "Cold Brew Reserve", "date": "2025-08-05", "import": false, "category": "ready-to-drink", "origin": "Hungary", "roast": "medium", "price": 3.9, "weightGrams": 330, "rating": 4.0, "inStock": true, "tags": ["cold", "bottled"] },
-  { "id": "q0e2h", "name": "Kenya AA", "date": "2025-12-01", "import": true, "category": "single-origin", "origin": "Kenya", "roast": "light", "price": 17.8, "weightGrams": 250, "rating": 4.9, "inStock": true, "tags": ["blackcurrant", "winey", "specialty"] }
-    ],
-    "$schema": "./node_modules/json-server/schema.json"
+  "Coffees": [
+    {
+      "id": "k3m9x",
+      "name": "Tchibo",
+      "date": "2025-10-15",
+      "import": true,
+      "category": "brand",
+      "origin": "Germany",
+      "roast": "medium",
+      "price": 8.49,
+      "weightGrams": 500,
+      "rating": 4.2,
+      "inStock": true,
+      "tags": [
+        "everyday",
+        "ground"
+      ]
+    },
+    {
+      "id": "p8q2w",
+      "name": "Lavazza",
+      "date": "2025-09-03",
+      "import": true,
+      "category": "brand",
+      "origin": "Italy",
+      "roast": "medium-dark",
+      "price": 11.9,
+      "weightGrams": 1000,
+      "rating": 4.5,
+      "inStock": true,
+      "tags": [
+        "espresso",
+        "beans"
+      ]
+    },
+    {
+      "id": "z7b4n",
+      "name": "Illy",
+      "date": "2025-08-21",
+      "import": true,
+      "category": "brand",
+      "origin": "Italy",
+      "roast": "medium",
+      "price": 7.8,
+      "weightGrams": 250,
+      "rating": 4.6,
+      "inStock": true,
+      "tags": [
+        "premium",
+        "arabica"
+      ]
+    },
+    {
+      "id": "d5h1c",
+      "name": "Nespresso",
+      "date": "2025-11-02",
+      "import": false,
+      "category": "capsule",
+      "origin": "Mixed",
+      "roast": "dark",
+      "price": 5.6,
+      "weightGrams": 52,
+      "rating": 4.3,
+      "inStock": true,
+      "tags": [
+        "capsules",
+        "espresso"
+      ]
+    },
+    {
+      "id": "t9r6v",
+      "name": "Jacobs",
+      "date": "2025-07-14",
+      "import": true,
+      "category": "brand",
+      "origin": "Germany",
+      "roast": "medium",
+      "price": 9.2,
+      "weightGrams": 500,
+      "rating": 4,
+      "inStock": false,
+      "tags": [
+        "filter",
+        "ground"
+      ]
+    },
+    {
+      "id": "m2l8e",
+      "name": "Ethiopian Yirgacheffe",
+      "date": "2025-06-30",
+      "import": true,
+      "category": "single-origin",
+      "origin": "Ethiopia",
+      "roast": "light",
+      "price": 16.5,
+      "weightGrams": 250,
+      "rating": 4.8,
+      "inStock": true,
+      "tags": [
+        "floral",
+        "fruity",
+        "specialty"
+      ]
+    },
+    {
+      "id": "w4y7j",
+      "name": "Colombian Supremo",
+      "date": "2025-05-18",
+      "import": true,
+      "category": "single-origin",
+      "origin": "Colombia",
+      "roast": "medium",
+      "price": 13,
+      "weightGrams": 250,
+      "rating": 4.4,
+      "inStock": true,
+      "tags": [
+        "balanced",
+        "caramel"
+      ]
+    },
+    {
+      "id": "g1s3u",
+      "name": "Local Roastery Blend",
+      "date": "2025-10-27",
+      "import": false,
+      "category": "blend",
+      "origin": "Hungary",
+      "roast": "medium-dark",
+      "price": 12.4,
+      "weightGrams": 250,
+      "rating": 4.7,
+      "inStock": true,
+      "tags": [
+        "local",
+        "small-batch"
+      ]
+    },
+    {
+      "id": "x6f0a",
+      "name": "Espresso Ristretto",
+      "date": "2025-04-09",
+      "import": false,
+      "category": "blend",
+      "origin": "Hungary",
+      "roast": "dark",
+      "price": 10.9,
+      "weightGrams": 250,
+      "rating": 4.1,
+      "inStock": false,
+      "tags": [
+        "intense",
+        "espresso"
+      ]
+    },
+    {
+      "id": "n8c5o",
+      "name": "Costa Rica Tarrazú",
+      "date": "2025-03-22",
+      "import": true,
+      "category": "single-origin",
+      "origin": "Costa Rica",
+      "roast": "medium-light",
+      "price": 15.2,
+      "weightGrams": 250,
+      "rating": 4.6,
+      "inStock": true,
+      "tags": [
+        "bright",
+        "citrus"
+      ]
+    },
+    {
+      "id": "b3v9i",
+      "name": "Cold Brew Reserve",
+      "date": "2025-08-05",
+      "import": false,
+      "category": "ready-to-drink",
+      "origin": "Hungary",
+      "roast": "medium",
+      "price": 3.9,
+      "weightGrams": 330,
+      "rating": 4,
+      "inStock": true,
+      "tags": [
+        "cold",
+        "bottled"
+      ]
+    },
+    {
+      "id": "q0e2h",
+      "name": "Kenya AA",
+      "date": "2025-12-01",
+      "import": true,
+      "category": "single-origin",
+      "origin": "Kenya",
+      "roast": "light",
+      "price": 17.8,
+      "weightGrams": 250,
+      "rating": 4.9,
+      "inStock": true,
+      "tags": [
+        "blackcurrant",
+        "winey",
+        "specialty"
+      ]
+    },
+    {
+      "id": "64TXOmhLloY",
+      "name": "FAFAFAF",
+      "date": "2026-11-22",
+      "import": true,
+      "category": "capsule",
+      "origin": "afasfsaf",
+      "roast": "medium-light",
+      "price": 200,
+      "weightGrams": 8000,
+      "rating": 4,
+      "inStock": true,
+      "tags": [
+        "afasfasf",
+        "afasfasf"
+      ]
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
