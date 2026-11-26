@@ -21,7 +21,8 @@ const emptyForm = {
 function AdminPage() {
   const [coffees, setCoffees] = useState<Coffee[]>([]);
   const [form, setForm] = useState(emptyForm);
-
+  const [update,setUpdate] = useState<boolean>(false);
+  const [editId,setEditId] = useState<string>("");
   async function loadData() {
     try {
       const data = await getCoffees();
@@ -95,6 +96,56 @@ function AdminPage() {
     loadData();
   }
 
+
+
+
+  async function handleUpdateForm(coffee : Coffee) {
+    setUpdate(true);
+    setEditId(coffee.id)
+    const updateForm = {
+      name: coffee.name,
+      date: coffee.date,
+      import: coffee.import,
+      category: coffee.category,
+      origin: coffee.origin,
+      roast: coffee.roast,
+      price: coffee.price.toString(),
+      weightGrams: coffee.weightGrams.toString(),
+      rating: coffee.rating.toString(),
+      inStock: coffee.inStock,
+      tags: coffee.tags.join(",")
+    }
+    setForm(updateForm)
+  }
+
+  async function updateData()
+  {
+    if(editId === "" || editId === null)
+    {
+      return;
+    }
+    const updateCofe: Coffee = {
+      id: editId,
+      name: form.name,
+      date: form.date,
+      import: form.import,
+      category: form.category,
+      origin: form.origin,
+      roast: form.roast,
+      price: Number(form.price),
+      weightGrams: Number(form.weightGrams),
+      rating: Number(form.rating),
+      inStock: form.inStock,
+      tags: form.tags.split(",").map((t) => t.trim()).filter((t) => t !== ""),
+    };
+
+  }
+
+  function handleDenine()
+  {
+    setForm(emptyForm)
+  }
+
   return (
     <>
       <div className="d-flex justify-content-between align-items-center mb-3">
@@ -103,8 +154,8 @@ function AdminPage() {
       </div>
 
       <div className="card mb-3">
-        <div className="card-header">Új kávék hozzáadása</div>
-        <form className="card-body" onSubmit={handleAdd}>
+        <div className="card-header">Új kávék hozzáadása/módositása</div>
+        <form className="card-body" onSubmit={update? (updateData):(handleAdd)}>
           <div className="row g-2">
             <div className="col-md-4">
               <label className="form-label">Kávé neve</label>
@@ -180,7 +231,8 @@ function AdminPage() {
             </div>
           </div>
 
-          <button type="submit" className="btn btn-success mt-3">Kávé hozzáadása</button>
+          <button type="submit" className="btn btn-success mt-3">{update? "Kávé módositása" : "Kávé hozzáadása"}</button>
+          {update? <button type="button" className="btn btn-danger" onClick={() => handleDenine()}>Mégsem</button> : ""}
         </form>
       </div>
 
@@ -235,7 +287,8 @@ function AdminPage() {
                   <span className="btn bg-secondary px-2 py-1" style={{color: "#FFFFFF"}}>{e.toString()}</span>
                 ))}</td>
                 <td>
-                  <button className="btn btn-sm btn-danger" onClick={() => handleDelete(coffee)}>Törlés</button>
+                  <button className="btn btn-sm btn-danger p-1" onClick={() => handleDelete(coffee)}>Törlés</button>
+                  <button className="btn btn-sm btn-primary p-1" onClick={() => handleUpdateForm(coffee)}>Módositás</button>
                 </td>
               </tr>
             ))}

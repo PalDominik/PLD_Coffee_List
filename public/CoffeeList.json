@@ -8,7 +8,7 @@
       "category": "brand",
       "origin": "Germany",
       "roast": "medium",
-      "price": 8.49,
+      "price": 9.99,
       "weightGrams": 500,
       "rating": 4.2,
       "inStock": true,
@@ -21,7 +21,7 @@
       "id": "p8q2w",
       "name": "Lavazza",
       "date": "2025-09-03",
-      "import": true,
+      "import": false,
       "category": "brand",
       "origin": "Italy",
       "roast": "medium-dark",
@@ -45,7 +45,7 @@
       "price": 7.8,
       "weightGrams": 250,
       "rating": 4.6,
-      "inStock": true,
+      "inStock": false,
       "tags": [
         "premium",
         "arabica"
@@ -221,6 +221,23 @@
       "tags": [
         "afasfasf",
         "afasfasf"
+      ]
+    },
+    {
+      "id": "1qwmjstzjTc",
+      "name": "fjjajasfgjas",
+      "date": "2026-11-26",
+      "import": false,
+      "category": "capsule",
+      "origin": "afasf",
+      "roast": "medium-light",
+      "price": 20,
+      "weightGrams": 250,
+      "rating": 4,
+      "inStock": true,
+      "tags": [
+        "polip",
+        "test"
       ]
     }
   ],
